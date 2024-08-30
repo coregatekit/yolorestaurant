@@ -1,0 +1,14 @@
+services:
+  yolodb:
+    image: postgres
+    environment:
+      POSTGRES_USER: antman
+      POSTGRES_PASSWORD: sup3rS3cr3t
+      POSTGRES_DB: yolorestaurant
+    ports:
+      - "5432:5432"
+    volumes:
+      - yolodb:/var/lib/postgresql/data
+
+volumes:
+  yolodb:
